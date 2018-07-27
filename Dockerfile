@@ -12,6 +12,8 @@ RUN echo '{ "allow_root": true }' > .bowerrc
 
 RUN npm install
 
+RUN cd client && npm install && npm run build
+
 # volume blockchain directory
 VOLUME /blockchain-explorer
 
